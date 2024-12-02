@@ -1,12 +1,23 @@
 <div>
-    Enviar Mensajes con Websockets!!!!
-    <div>
-        <p>
-            <input id="textoEntrada" type="text" alt="Introduce un MEnsaje">
-        </p>
-        <p id="log"></p>
+   <h1>Bienvenido al Chat de la Camada</h1>
+   <h2>Nombre: <span id="myName"></span></h2>
+    
+    {{!-- Input del Mensaje --}}
+    <div>        
+        <p>Escribe un Mensaje en Nuestro ChatBox: <input type="text" id="chatBox"></p>  
+              {{!-- Boton del cierre ChatBox --}}
+        <button id="closeChatBox">Close Chat</button>
     </div>
+
+    {{!-- Renderizado de los Mensajes --}}
+
+    <div>
+        <p id="menssagesLogs"></p>
+    </div>
+    
 </div>
 
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="/socket.io/socket.io.js"></script>
 <script src="/js/messages.js"></script>
